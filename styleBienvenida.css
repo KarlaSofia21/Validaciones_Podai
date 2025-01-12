@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+.imagen-banner, .imagen-barra {
+    max-width: 100%;
+    height: auto;
+}
+
+.navegacion {
+    background-color: #333;
+    position: relative;
+}
+
+.toggle-menu {
+    display: none;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.lista-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lista-menu li {
+    display: inline;
+}
+
+.lista-menu li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.lista-menu li a:hover {
+    background-color: #111;
+}
+
+
+
+.content {
+    padding: 20px;
+    background-color: #e7ffe6;
+    text-align: center;
+}
+
+.pie-pagina {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .lista-menu li {
+        display: block;
+    }
+
+    .toggle-menu {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navegacion.mostrar .lista-menu {
+        display: flex;
+    }
+}
+
+.lista-menu li {
+    position: relative; 
+}
+
+.lista-menu .sub-menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.lista-menu .sub-menu li {
+    display: block; 
+}
+
+.lista-menu .sub-menu li a {
+    color: white; 
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.lista-menu .sub-menu li a:hover {
+    background-color: #111; 
+}
+
+
+.lista-menu li:hover .sub-menu {
+    display: block; 
+}
+@media (max-width: 768px) {
+    .lista-menu .sub-menu {
+        position: static; 
+        box-shadow: none; 
+    }
+
+    .lista-menu li:hover .sub-menu {
+        display: none; 
+    }
+
+    .navegacion.mostrar .sub-menu {
+        display: flex; 
+        flex-direction: column;
+    }
+}

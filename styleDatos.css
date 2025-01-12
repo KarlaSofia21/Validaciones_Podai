@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+.imagen-banner, .imagen-barra {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor-bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f4e6; 
+    border: 2px solid #6aa84f; 
+    border-radius: 10px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0; 
+    margin-right: 0; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+
+.contenedor-bienvenida h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contenedor-bienvenida p {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.navegacion {
+    background-color: #333;
+    position: relative;
+}
+
+.toggle-menu {
+    display: none;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.lista-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lista-menu li {
+    display: inline;
+}
+
+.lista-menu li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.lista-menu li a:hover {
+    background-color: #111;
+}
+
+.contenedor-titulo {
+    background-color: hsl(46, 81%, 68%);
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.centrado-negrita {
+    text-align: center;
+    font-weight: bold;
+}
+
+.contenedor-formulario {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones button {
+    background: none;
+    border: none;
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.botones button:hover {
+    color: darkgreen;
+}
+
+.pie-pagina {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .lista-menu li {
+        display: block;
+    }
+
+    .toggle-menu {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navegacion.mostrar .lista-menu {
+        display: flex;
+    }
+
+    .contenedor-bienvenida {
+         padding: 15px;
+    }
+    
+    .contenedor-bienvenida h1 {
+         font-size: 2rem;
+     }
+    
+    .contenedor-bienvenida p {
+         font-size: 1rem;
+    }
+    
+}
+.lista-menu .sub-menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: #333; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.lista-menu .sub-menu li {
+    display: block; 
+}
+
+.lista-menu .sub-menu li a {
+    color: white; 
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.lista-menu .sub-menu li a:hover {
+    background-color: #111; 
+}
+
+
+.lista-menu li:hover .sub-menu {
+    display: block; 
+}
+@media (max-width: 768px) {
+    .lista-menu .sub-menu {
+        position: static; 
+        box-shadow: none; 
+    }
+
+    .lista-menu li:hover .sub-menu {
+        display: none; 
+    }
+
+    .navegacion.mostrar .sub-menu {
+        display: flex; 
+        flex-direction: column;
+    }
+}
